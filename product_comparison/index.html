@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Saturn_2021</title>
+    <link rel="stylesheet" href="/saturn2021.ru/styles/mainFull.css" />
+    <link rel="stylesheet" href="/saturn2021.ru/styles/fonts.css" />
+    <link rel="stylesheet" href="/saturn2021.ru/styles/slick.css" />
+    <link rel="stylesheet" href="/saturn2021.ru/styles/slick-theme.css" />
+    <!-- PagesStyles -->
+    <link
+      rel="stylesheet"
+      href="/saturn2021.ru/styles/named_styles/action_page_delivery.css"
+    />
+    <link rel="stylesheet" href="/saturn2021.ru/styles/named_styles/shop.css" />
+    <link
+      rel="stylesheet"
+      href="/saturn2021.ru/styles/named_styles/header.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/saturn2021.ru/styles/named_styles/main_vacancies.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/saturn2021.ru/styles/named_styles/product_comparison.css"
+    />
+
+    <script src="/saturn2021.ru/js/jquery-3.4.1.min.js"></script>
+    <script src="/saturn2021.ru/js/script.js"></script>
+    <script src="/saturn2021.ru/js/slick.min.js"></script>
+    <script src="/saturn2021.ru/js/jquery.inputmask.min.js"></script>
+    <script src="/saturn2021.ru/js/jquery.nicescroll.min.js"></script>
+  </head>
+
+  <body>
+    <header class="header header-active">
+      <section>
+        <div class="header_region_popup popup_hidden">
+          <div class="header_region_popup_title">
+            <h2>Select city:</h2>
+          </div>
+        </div>
+        <div class="inner">
+          <div class="first-block">
+            <div class="city-choose">
+              <a href="">
+                <img src="/saturn2021.ru/img/newHeader/location.png" alt="" />
+                <p>Saint-Petersburg</p>
+                <img src="/saturn2021.ru/img/newHeader/arrowDown.png" alt="" />
+              </a>
+            </div>
+            <div>
+              <p>8 812 322 22 66</p>
+            </div>
+          </div>
+          <div class="second-block">
+            <div>
+              <a href="">
+                <img src="/saturn2021.ru/img/newHeader/actions.png" alt="" />
+                <p>Stock</p>
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <p>Customers</p>
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <p>Shops</p>
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <p>Vacancies</p>
+              </a>
+            </div>
+          </div>
+          <div class="third-block">
+            <div>
+              <a href="">
+                <img src="/saturn2021.ru/img/newHeader/arrows.png" alt="" />
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img src="/saturn2021.ru/img/newHeader/chernovick.png" alt="" />
+                <p>Draft</p>
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img src="/saturn2021.ru/img/newHeader/sravnenie.png" alt="" />
+                <p>Comparison</p>
+              </a>
+            </div>
+            <div>
+              <a href="">
+                <img src="/saturn2021.ru/img/newHeader/favorite.png" alt="" />
+                <p>Favorites</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="main-navbar">
+        <section class="logo">
+          <a href="">
+            <img src="/saturn2021.ru/img/newHeader/logo.svg" alt="" />
+          </a>
+        </section>
+        <section class="cat-search">
+          <a href="">
+            <img src="/saturn2021.ru/img/newHeader/catalouge.svg" alt="" />
+            <p>Catalog</p>
+          </a>
+          <div>
+            <input type="search" placeholder="Саморезы, цемент, гипрок..." />
+            <p>Search for a product or service</p>
+          </div>
+        </section>
+        <section class="links">
+          <a href="">
+            <img src="/saturn2021.ru/img/newHeader/feedback.svg" alt="" />
+            <p>Feedback</p>
+          </a>
+          <a href="">
+            <img src="/saturn2021.ru/img/newHeader/profile.svg" alt="" />
+            <p>Profile</p>
+          </a>
+          <a href="">
+            <img src="/saturn2021.ru/img/newHeader/cart.svg" alt="" />
+            <p>Cart</p>
+          </a>
+        </section>
+      </section>
+    </header>
+
+    <script>
+      $(document).ready(function () {
+        console.log($(".header_region_popup"));
+        $(".city-choose").on("click", function () {
+          console.log($(".first-block").html());
+          if ($(".header_region_popup").hasClass("city-choose_hidden")) {
+            $(".header_region_popup").removeClass("city-choose_hidden");
+          } else {
+            $(".header_region_popup").addClass("city-choose_hidden");
+          }
+          $(".header_region_popup").toggle();
+        });
+      });
+    </script>
+
+    <link
+      rel="stylesheet"
+      href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/sunny/jquery-ui.css"
+    />
+
+    <section class="product_comparison_navBtns">
+      <h2>Product comparison</h2>
+      <div class="product_comparison filter-btns">
+        <button>All <span>(20)</span></button>
+        <button>Universal <span>(9)</span></button>
+        <button>Tile adhesive <span>(11)</span></button>
+      </div>
+      <div class="product_comparison filter-show">
+        <p class="show">Show:</p>
+        <button>Distinguishing Characteristics</button>
+        <button class="all">All characteristics</button>
+        <div class="clear-btn">
+          <img src="/saturn2021.ru/img/product_comparison/clear.svg" alt="" />
+          <p>Clear</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="product_comparison_two">
+      <div class="slider-container">
+        <button class="slider-button_right"></button>
+        <button class="slider-button_left"></button>
+        <div class="slider-track" id="slider">
+          <div class="slider-item">
+            <img src="/saturn2021.ru/img/product_comparison/1.jpg" alt="" />
+            <p>ITEM</p>
+          </div>
+          <div class="slider-item">
+            <img src="/saturn2021.ru/img/product_comparison/2.jpg" alt="" />
+            <p>ITEM</p>
+          </div>
+          <div class="slider-item">
+            <img src="/saturn2021.ru/img/product_comparison/3.jpg" alt="" />
+            <p>ITEM</p>
+          </div>
+          <div class="slider-item">
+            <img src="/saturn2021.ru/img/product_comparison/4.jpg" alt="" />
+            <p>ITEM</p>
+          </div>
+          <div class="slider-item">
+            <img src="/saturn2021.ru/img/product_comparison/1.jpg" alt="" />
+            <p>ITEM</p>
+          </div>
+          <div class="slider-item">
+            <img src="/saturn2021.ru/img/product_comparison/2.jpg" alt="" />
+            <p>ITEM</p>
+          </div>
+          <div class="slider-item">
+            <img src="/saturn2021.ru/img/product_comparison/3.jpg" alt="" />
+            <p>ITEM</p>
+          </div>
+          <div class="slider-item">
+            <img src="/saturn2021.ru/img/product_comparison/4.jpg" alt="" />
+            <p>ITEM</p>
+          </div>
+          <div class="slider-item">
+            <img src="/saturn2021.ru/img/product_comparison/1.jpg" alt="" />
+            <p>ITEM</p>
+          </div>
+          <div class="slider-item">
+            <img src="/saturn2021.ru/img/product_comparison/2.jpg" alt="" />
+            <p>ITEM</p>
+          </div>
+          <div class="slider-item">
+            <img src="/saturn2021.ru/img/product_comparison/3.jpg" alt="" />
+            <p>ITEM</p>
+          </div>
+          <div class="slider-item">
+            <img src="/saturn2021.ru/img/product_comparison/4.jpg" alt="" />
+            <p>ITEM</p>
+          </div>
+          <div class="slider-item">
+            <img src="/saturn2021.ru/img/product_comparison/1.jpg" alt="" />
+            <p>ITEM</p>
+          </div>
+          <div class="slider-item">
+            <img src="/saturn2021.ru/img/product_comparison/2.jpg" alt="" />
+            <p>aaaaaaa</p>
+          </div>
+        </div>
+        <div class="goods-data">
+          <p class="main-title">Specifications</p>
+          <div class="row purpose">
+            <p class="title">Purpose</p>
+            <p>Для мозайки</p>
+            <p>Для мозайки</p>
+            <p>Для мозайки</p>
+            <p>Для мозайки</p>
+            <p>Для мозайки</p>
+            <p>Для мозайки</p>
+            <p>Для мозайки</p>
+            <p>Для мозайки</p>
+            <p>Для мозайки</p>
+            <p>Для мозайки</p>
+            <p>Для мозайки</p>
+            <p>Для мозайки</p>
+            <p>Для мозайки</p>
+            <p>Для мозайки</p>
+          </div>
+          <div class="row work-types">
+            <p class="title">Type of work</p>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+          </div>
+          <div class="row fraction">
+            <p class="title">Fraction</p>
+            <p>До 0,63 мм</p>
+            <p>До 0,63 мм</p>
+            <p>До 0,63 мм</p>
+            <p>До 0,63 мм</p>
+            <p>До 0,63 мм</p>
+            <p>До 0,63 мм</p>
+            <p>До 0,63 мм</p>
+            <p>До 0,63 мм</p>
+            <p>До 0,63 мм</p>
+            <p>До 0,63 мм</p>
+            <p>До 0,63 мм</p>
+            <p>До 0,63 мм</p>
+            <p>До 0,63 мм</p>
+            <p>До 0,63 мм</p>
+          </div>
+          <div class="row universal">
+            <p class="title">Universal</p>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Внутренние</p>
+                <p>Наружные</p>
+              </div>
+            </div>
+          </div>
+          <div class="row underflow-heating">
+            <p class="title">For underfloor heating</p>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row layers-thikness">
+            <p class="title">Layer thickness, mm</p>
+            <p>1,5 - 2</p>
+            <p>1,5 - 2</p>
+            <p>1,5 - 2</p>
+            <p>1,5 - 2</p>
+            <p>1,5 - 2</p>
+            <p>1,5 - 2</p>
+            <p>1,5 - 2</p>
+            <p>1,5 - 2</p>
+            <p>1,5 - 2</p>
+            <p>1,5 - 2</p>
+            <p>1,5 - 2</p>
+            <p>1,5 - 2</p>
+            <p>1,5 - 2</p>
+            <p>1,5 - 2</p>
+          </div>
+          <div class="row drymix-consumption">
+            <p class="title">Dry mix consumption, kg/m2</p>
+            <p>1-4,4</p>
+            <p>1-4,4</p>
+            <p>1-4,4</p>
+            <p>1-4,4</p>
+            <p>1-4,4</p>
+            <p>1-4,4</p>
+            <p>1-4,4</p>
+            <p>1-4,4</p>
+            <p>1-4,4</p>
+            <p>1-4,4</p>
+            <p>1-4,4</p>
+            <p>1-4,4</p>
+            <p>1-4,4</p>
+            <p>1-4,4</p>
+          </div>
+          <div class="row quick-dry">
+            <p class="title">Quick dry</p>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="/saturn2021.ru/img/product_comparison/confirm.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="row for-foundation">
+            <p class="title">For grounds</p>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Бетон</p>
+                <p>Ячеистый бетон</p>
+                <p>Цементная штукатурка</p>
+                <p>Известково-цементная штукатурка</p>
+                <p>ГКЛ</p>
+                <p>ПГП</p>
+                <p>Железобетон</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Бетон</p>
+                <p>Ячеистый бетон</p>
+                <p>Цементная штукатурка</p>
+                <p>Известково-цементная штукатурка</p>
+                <p>ГКЛ</p>
+                <p>ПГП</p>
+                <p>Железобетон</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Бетон</p>
+                <p>Ячеистый бетон</p>
+                <p>Цементная штукатурка</p>
+                <p>Известково-цементная штукатурка</p>
+                <p>ГКЛ</p>
+                <p>ПГП</p>
+                <p>Железобетон</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Бетон</p>
+                <p>Ячеистый бетон</p>
+                <p>Цементная штукатурка</p>
+                <p>Известково-цементная штукатурка</p>
+                <p>ГКЛ</p>
+                <p>ПГП</p>
+                <p>Железобетон</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Бетон</p>
+                <p>Ячеистый бетон</p>
+                <p>Цементная штукатурка</p>
+                <p>Известково-цементная штукатурка</p>
+                <p>ГКЛ</p>
+                <p>ПГП</p>
+                <p>Железобетон</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Бетон</p>
+                <p>Ячеистый бетон</p>
+                <p>Цементная штукатурка</p>
+                <p>Известково-цементная штукатурка</p>
+                <p>ГКЛ</p>
+                <p>ПГП</p>
+                <p>Железобетон</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Бетон</p>
+                <p>Ячеистый бетон</p>
+                <p>Цементная штукатурка</p>
+                <p>Известково-цементная штукатурка</p>
+                <p>ГКЛ</p>
+                <p>ПГП</p>
+                <p>Железобетон</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Бетон</p>
+                <p>Ячеистый бетон</p>
+                <p>Цементная штукатурка</p>
+                <p>Известково-цементная штукатурка</p>
+                <p>ГКЛ</p>
+                <p>ПГП</p>
+                <p>Железобетон</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Бетон</p>
+                <p>Ячеистый бетон</p>
+                <p>Цементная штукатурка</p>
+                <p>Известково-цементная штукатурка</p>
+                <p>ГКЛ</p>
+                <p>ПГП</p>
+                <p>Железобетон</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Бетон</p>
+                <p>Ячеистый бетон</p>
+                <p>Цементная штукатурка</p>
+                <p>Известково-цементная штукатурка</p>
+                <p>ГКЛ</p>
+                <p>ПГП</p>
+                <p>Железобетон</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Бетон</p>
+                <p>Ячеистый бетон</p>
+                <p>Цементная штукатурка</p>
+                <p>Известково-цементная штукатурка</p>
+                <p>ГКЛ</p>
+                <p>ПГП</p>
+                <p>Железобетон</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Бетон</p>
+                <p>Ячеистый бетон</p>
+                <p>Цементная штукатурка</p>
+                <p>Известково-цементная штукатурка</p>
+                <p>ГКЛ</p>
+                <p>ПГП</p>
+                <p>Железобетон</p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="inner-data">
+                <p>Бетон</p>
+                <p>Ячеистый бетон</p>
+                <p>Цементная штукатурка</p>
+                <p>Известково-цементная штукатурка</p>
+                <p>ГКЛ</p>
+                <p>ПГП</p>
+                <p>Железобетон</p>
+              </div>
+            </div>
+          </div>
+          <div class="row water-consumption">
+            <p class="title">Water consumption l/kg</p>
+            <p>0,22</p>
+            <p>0,22</p>
+            <p>0,22</p>
+            <p>0,22</p>
+            <p>0,22</p>
+            <p>0,22</p>
+            <p>0,22</p>
+            <p>0,22</p>
+            <p>0,22</p>
+            <p>0,22</p>
+            <p>0,22</p>
+            <p>0,22</p>
+            <p>0,22</p>
+            <p>0,22</p>
+          </div>
+          <div class="row storage-period">
+            <p class="title">Shelf life in undamaged packaging, months</p>
+            <p>12</p>
+            <p>12</p>
+            <p>12</p>
+            <p>12</p>
+            <p>12</p>
+            <p>12</p>
+            <p>12</p>
+            <p>12</p>
+            <p>12</p>
+            <p>12</p>
+            <p>12</p>
+            <p>12</p>
+            <p>12</p>
+            <p>12</p>
+          </div>
+        </div>
+      </div>
+      <div class="white-background_end"></div>
+      <div class="white-background_start"></div>
+    </section>
+
+    <script>
+      $(window).scroll(function () {
+        console.log($(window).scrollTop());
+        if ($(window).scrollTop() > 100 && $(window).scrollTop() < 2700) {
+          $(".slider-track").css({
+            boxShadow: "1px 5px 10px rgba(0, 0, 0, 0.15)",
+            top: "0px",
+            paddingTop: "150px",
+          });
+          $(".header").addClass("header-active");
+          /*  $('.product_comparison_navBtns').hide(); */
+        } else {
+          $(".slider-track").css({
+            boxShadow: "none",
+            top: "0",
+            paddingTop: "20px",
+          });
+          $(".header").removeClass("header-active");
+          /*  $('.product_comparison_navBtns').show(); */
+        }
+      });
+
+      //Clean
+      let clean_btn = $(".product_comparison.filter-show .clear-btn");
+      let container = $(".product_comparison_two .slider-container");
+
+      clean_btn.on("click", function () {
+        $(".slider-track").remove();
+        $(".goods-data").remove();
+        $(".slider-button_left").hide();
+        $(".slider-button_right").hide();
+        $(".product_comparison_two").append(
+          "<h3 style='text-align:center; margin-top:150px'>Nothing here<h3>"
+        );
+      });
+    </script>
+    <script src="./saturn2021.ru/js/slider_logic.js"></script>
+  </body>
+</html>
